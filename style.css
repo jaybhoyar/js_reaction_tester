@@ -72,18 +72,7 @@ td {
 	font-weight: 600;
 	color: #3e3e3e;
 }
-.list {
-	display: flex;
-	justify-content: space-evenly;
-}
-.para {
-	padding: 6px 12px;
-	font-size: 1rem;
-}
-span {
-	padding: 6px 12px;
-	font-size: 1rem;
-}
+
 h1 {
 	font-size: 2.5rem;
 }
