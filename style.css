@@ -9,6 +9,7 @@
 	font-size: 25px;
 	margin: 4px 2px;
 	cursor: pointer;
+	display: none;
 }
 body {
 	counter-reset: Count-Value;
@@ -42,6 +43,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	border: 1px solid #000;
+	box-sizing: border-box;
 }
 .two,
 .one {
@@ -49,12 +51,41 @@ body {
 	font-weight: 500;
 	padding: 8px 16px;
 }
-/* #myTable {
-	border: 1px solid rgb(147, 147, 147);
-} */
+.table {
+	width: 100%;
+}
+#myTable {
+	width: 100%;
+	border: 0.5px solid rgb(148, 148, 148);
+}
+td {
+	width: 50%;
+	border: 0.5px solid rgb(148, 148, 148);
+	border-left: none;
+	border-right: none;
+	border-top: none;
+}
 #average {
 	height: 50px;
 	width: 200px;
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #3e3e3e;
+}
+.list {
+	display: flex;
+	justify-content: space-evenly;
+}
+.para {
+	padding: 6px 12px;
+	font-size: 1rem;
+}
+span {
+	padding: 6px 12px;
+	font-size: 1rem;
+}
+h1 {
+	font-size: 2.5rem;
 }
 #limit {
 	top: 100px;

@@ -10,27 +10,29 @@
 	</head>
 
 	<body>
-		<h1><center>Javascript Reaction Tester</center></h1>
-		<button id="refresh" class="refresh">Reset</button>
+		<center><h1>Javascript Reaction Tester</h1></center>
+		<a href="index.html"
+			><button id="refresh" class="refresh">Reset</button></a
+		>
 		<h2><p id="demo"></p></h2>
 		<div class="container">
 			<div id="shape"></div>
 		</div>
 
 		<div id="timedata">
-			<div id="average"></div>
-
 			<form name="timings">
-				<input
-					type="button"
-					class="button"
-					id="button"
-					value="Sort the Entries"
-				/>
+				<input type="button" class="button" id="button" value="" />
+				<div id="average"></div>
 				<div id="inline">
-					<div class="two">#</div>
+					<div class="two">Sr.No</div>
 					<div class="one">Time Taken</div>
-					<ul></ul>
+				</div>
+				<div class="table">
+					<table
+						cellpadding="10"
+						cellspacing="0"
+						id="myTable"
+					></table>
 				</div>
 			</form>
 		</div>

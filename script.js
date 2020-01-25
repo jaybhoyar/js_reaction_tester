@@ -1,10 +1,6 @@
-var table = document.getElementById("myTable");
-let shape = document.getElementById("shape");
-const ul = document.querySelector("ul");
-// let average = document.getElementById("average");
 var start = new Date().getTime();
-
-var start = new Date().getTime();
+let shape = document.querySelector("#shape");
+let average = document.querySelector("#average");
 
 function getrandomColor() {
 	var letters = "0123456789ABCDEF".split("");
@@ -28,10 +24,12 @@ function makeShapeAppear() {
 	}
 
 	shape.style.backgroundColor = getrandomColor();
+	shape.style.cursor = "pointer";
 	shape.style.top = top + "px";
 	shape.style.left = left + "px";
 	shape.style.width = width + "px";
 	shape.style.display = "block";
+
 	start = new Date().getTime();
 }
 
@@ -44,17 +42,23 @@ var count = 0;
 var sum = 0;
 var numArray = [];
 
-function calculate() {
-	shape.style.display = "none";
+document.getElementById("shape").onclick = function() {
+	document.getElementById("shape").style.display = "none";
+
 	var end = new Date().getTime();
+
 	var timeTaken = (end - start) / 1000;
-	let li = document.createElement("li");
-	let p = document.createElement("p");
+
+	var table = document.getElementById("myTable");
+	var row = table.insertRow(-1);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+
 	cell2.innerHTML = timeTaken + "s"; //inserting reacting time in table
 
 	sum = sum + timeTaken;
 	var avg = sum / ++count;
-	average.innerHTML = "Average is = " + avg.toFixed(2) + "s";
+	average.innerHTML = "Average = " + avg.toFixed(2) + "s";
 
 	numArray.push(timeTaken);
 	numArray.sort();
@@ -74,14 +78,14 @@ function calculate() {
 			cell2.innerHTML = numArray[i] + "s";
 			//alert(numArray);
 
-			if (avg < 1) {
-				greeting = "Excellent Reaction Time";
-			} else if (avg > 1 && avg < 1.6) {
-				greeting = "Good Reaction Time";
-			} else {
-				greeting = "Weak Reaction Time";
-			}
-			document.getElementById("demo").innerHTML = greeting;
+			// if (avg < 1) {
+			// 	greeting = "Excellent Reaction Time";
+			// } else if (avg > 1 && avg < 1.6) {
+			// 	greeting = "Good Reaction Time";
+			// } else {
+			// 	greeting = "Weak Reaction Time";
+			// }
+			// document.getElementById("demo").innerHTML = greeting;
 		}
 	}; // Onclick ending
 	function refresh() {
@@ -89,5 +93,4 @@ function calculate() {
 	}
 
 	AppearAfterDelay();
-}
-shape.addEventListener("click", calculate);
+};
