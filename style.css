@@ -1,0 +1,89 @@
+.button {
+	background-color: #3bed3b;
+	border: none;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 25px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+body {
+	counter-reset: Count-Value;
+	font-family: "Courier New", Courier, monospace;
+}
+.container {
+	position: fixed;
+	top: 150px;
+	width: 0%;
+	height: 700px;
+	background-color: aquamarine;
+}
+#refresh {
+	position: fixed;
+	top: 100px;
+	left: 30px;
+	border-radius: 2px;
+	padding: 16px 30px;
+	border: 0;
+	font-size: 1rem;
+	outline: none;
+	transition: 0.2s ease-out;
+	color: rgb(0, 0, 0);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+		0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+#inline {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid #000;
+}
+.two,
+.one {
+	font-size: 1.3rem;
+	font-weight: 500;
+	padding: 8px 16px;
+}
+/* #myTable {
+	border: 1px solid rgb(147, 147, 147);
+} */
+#average {
+	height: 50px;
+	width: 200px;
+}
+#limit {
+	top: 100px;
+	height: 500px;
+	width: 700px;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid black;
+}
+#timedata {
+	top: 100px;
+	right: 80px;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+}
+#shape {
+	width: 100px;
+	height: 100px;
+	/* background-color: black; */
+	display: none;
+	position: relative;
+	margin: 0px;
+}
+#timeTaken {
+	font-weight: bold;
+}
+
+tr td:first-child:before {
+	counter-increment: Count-Value;
+	content: "" counter(Count-Value);
+}
