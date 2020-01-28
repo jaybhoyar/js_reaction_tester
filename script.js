@@ -29,7 +29,6 @@ function makeShapeAppear() {
 	shape.style.left = left + "px";
 	shape.style.width = width + "px";
 	shape.style.display = "block";
-
 	start = new Date().getTime();
 }
 
