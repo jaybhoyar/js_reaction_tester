@@ -17,14 +17,14 @@ body {
 }
 .container {
 	position: fixed;
-	top: 150px;
+	top: 250px;
 	width: 0%;
 	height: 700px;
 	background-color: aquamarine;
 }
 #refresh {
-	position: fixed;
-	top: 100px;
+	position: relative;
+	top: 150px;
 	left: 30px;
 	border-radius: 2px;
 	padding: 16px 30px;
@@ -76,6 +76,13 @@ td {
 h1 {
 	font-size: 2.5rem;
 	text-align: center;
+}
+.rules {
+	margin: 20px 0;
+}
+.rules span {
+	color: #3e3e3e;
+	font-size: 0.8rem;
 }
 #limit {
 	top: 100px;
